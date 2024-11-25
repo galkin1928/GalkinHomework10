@@ -11,7 +11,12 @@ import SwiftUI
 struct testVolumeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }.windowStyle(.volumetric)
+
+        WindowGroup("Drag & Drop") {
+            DragDropView()
+        }
+        .windowStyle(.volumetric)
     }
 }
